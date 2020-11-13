@@ -10,20 +10,12 @@ package examen1_kevinrodriguez;
  * @author Kevin
  */
 public class Elmikoljacksonmorido extends Campistas {
-    protected int con=0;
 
     public Elmikoljacksonmorido() {
     }
 
-    public Elmikoljacksonmorido(String campista, String estado) {
-        super(campista, estado);
+    public Elmikoljacksonmorido(String Nombre, int edad, String sexo, String arma, String por, String campista, String estado) {
+        super(Nombre, edad, sexo, arma, por, campista, estado);
     }
-
-    public String getCampista() {
-        return campista;
-    }
-
-    public void setCampista(String campista) {
-        this.campista = campista;
-    }
+    
 }

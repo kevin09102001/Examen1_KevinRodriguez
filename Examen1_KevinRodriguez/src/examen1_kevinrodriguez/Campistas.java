@@ -9,16 +9,13 @@ package examen1_kevinrodriguez;
  *
  * @author Kevin
  */
-public class Campistas {
-    public String campista;
-    public String estado;
+public class Campistas extends agregar {
 
     public Campistas() {
     }
 
-    public Campistas(String campista, String estado) {
-        this.campista = campista;
-        this.estado = estado;
+    public Campistas(String Nombre, int edad, String sexo, String arma, String por, String campista, String estado) {
+        super(Nombre, edad, sexo, arma, por, campista, estado);
     }
 
     public String getCampista() {
@@ -36,10 +33,5 @@ public class Campistas {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
-    @Override
-    public String toString() {
-        return "campista=" + campista + ", estado=" + estado + '}';
-    }
-    
+   
 }
