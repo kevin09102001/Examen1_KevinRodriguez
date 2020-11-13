@@ -320,6 +320,7 @@ public class principal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        String mos="";
         for (Object a : anad) {
+             mos+="Pocision: "+anad.indexOf(a)+"\n";
              mos+=a+"\n";   
         }
         lista.setText(mos);

@@ -9,37 +9,14 @@ package examen1_kevinrodriguez;
  *
  * @author Kevin
  */
-public class armast {
-    public String arma;
-    public String por;
+public class armast  extends agregar {
+
     public armast() {
     }
 
-    public armast(String arma) {
-        this.arma = arma;
+    public armast(String Nombre, int edad, String sexo, String arma, String por, String campista, String estado) {
+        super(Nombre, edad, sexo, arma, por, campista, estado);
     }
-
-    public armast(String arma, String por) {
-        this.arma = arma;
-        this.por = por;
-    }
-
-    public String getArma() {
-        return arma;
-    }
-
-    public void setArma(String arma) {
-        this.arma = arma;
-    }
-
-    public String getPor() {
-        return por;
-    }
-
-    public void setPor(String por) {
-        this.por = por;
-    }
-
-    
+   
     
 }

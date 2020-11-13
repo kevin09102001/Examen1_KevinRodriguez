@@ -36,5 +36,10 @@ public class Campistas {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+    @Override
+    public String toString() {
+        return "campista=" + campista + ", estado=" + estado + '}';
+    }
     
 }
