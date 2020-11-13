@@ -11,7 +11,7 @@ package examen1_kevinrodriguez;
  */
 public class agregar {
     protected String Nombre;
-    protected int edad;
+    protected String edad;
     protected String sexo;
     public String arma;
     public String por;
@@ -21,7 +21,7 @@ public class agregar {
         
     }
 
-    public agregar(String Nombre, int edad, String sexo, String arma, String por, String campista, String estado) {
+    public agregar(String Nombre, String edad, String sexo, String arma, String por, String campista, String estado) {
         this.Nombre = Nombre;
         this.edad = edad;
         this.sexo = sexo;
@@ -39,11 +39,11 @@ public class agregar {
         this.Nombre = Nombre;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 

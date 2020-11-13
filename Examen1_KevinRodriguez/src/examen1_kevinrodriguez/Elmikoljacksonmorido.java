@@ -14,7 +14,7 @@ public class Elmikoljacksonmorido extends Campistas {
     public Elmikoljacksonmorido() {
     }
 
-    public Elmikoljacksonmorido(String Nombre, int edad, String sexo, String arma, String por, String campista, String estado) {
+    public Elmikoljacksonmorido(String Nombre, String edad, String sexo, String arma, String por, String campista, String estado) {
         super(Nombre, edad, sexo, arma, por, campista, estado);
     }
     

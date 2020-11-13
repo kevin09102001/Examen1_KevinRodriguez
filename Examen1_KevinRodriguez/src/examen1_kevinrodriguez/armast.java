@@ -14,7 +14,7 @@ public class armast  extends agregar {
     public armast() {
     }
 
-    public armast(String Nombre, int edad, String sexo, String arma, String por, String campista, String estado) {
+    public armast(String Nombre, String edad, String sexo, String arma, String por, String campista, String estado) {
         super(Nombre, edad, sexo, arma, por, campista, estado);
     }
    

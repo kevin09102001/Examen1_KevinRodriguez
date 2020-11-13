@@ -14,7 +14,7 @@ public class Campistas extends agregar {
     public Campistas() {
     }
 
-    public Campistas(String Nombre, int edad, String sexo, String arma, String por, String campista, String estado) {
+    public Campistas(String Nombre, String edad, String sexo, String arma, String por, String campista, String estado) {
         super(Nombre, edad, sexo, arma, por, campista, estado);
     }
 

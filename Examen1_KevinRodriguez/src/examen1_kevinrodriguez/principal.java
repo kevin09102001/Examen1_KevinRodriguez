@@ -450,8 +450,7 @@ public class principal extends javax.swing.JFrame {
         a=tipo.getSelectedItem().toString();
         sexo=sex.getSelectedItem().toString();
         String edada=Edad.getText();
-        char sa=(char) e;
-        agregar m=new agregar(Nombre.getText(),e,sexo,a,porcen,campis,estad);
+        agregar m=new agregar(Nombre.getText(),edada,sexo,a,porcen,campis,estad);
         anad.add(m);    
 
         JOptionPane.showMessageDialog(null, "Se añadio correctamente");   
@@ -481,25 +480,25 @@ public class principal extends javax.swing.JFrame {
            String pc=sxs.getText();
            int ca=Integer.parseInt(pc);
             if (ca>=0 && ca<anad.size()) {
-            String a="";
+            String a=Nombre.getText();
             a=aa.getText();
             ((agregar)anad.get(0)).setNombre(a);
-             String aa2="";
+             String aa2=Edad.getText();
             aa2=a1.getText();
             ((agregar)anad.get(1)).setNombre(aa2);
-            String aa3="";
+            String aa3=sex.getSelectedItem().toString();;
             aa3=a2.getSelectedItem().toString();
             ((agregar)anad.get(2)).setNombre(aa3);
-             String aa4="";
+             String aa4=tipo.getSelectedItem().toString();;
             aa3=a3.getSelectedItem().toString();
             ((agregar)anad.get(3)).setNombre(aa4);
-             String aa5="";
+             String aa5=por.getSelectedItem().toString();
             aa5=a4.getSelectedItem().toString();
             ((agregar)anad.get(4)).setNombre(aa5);
-             String aa6="";
+             String aa6=cam.getSelectedItem().toString();
             aa6=a5.getSelectedItem().toString();
             ((agregar)anad.get(5)).setNombre(aa6);
-             String aa7="";
+             String aa7=estado.getSelectedItem().toString();
             aa7=a6.getSelectedItem().toString();
             ((agregar)anad.get(6)).setNombre(aa7);
             }
@@ -511,9 +510,8 @@ public class principal extends javax.swing.JFrame {
     public void mostrar(){
         String mos="";
         for (Object a : anad) {
-            if (((Campistas)anad.get(6)).getCampista().equalsIgnoreCase("viva")) {
              mos+=a+"\n";   
-            }
+            
         }
         lista.setText(mos);
     }
