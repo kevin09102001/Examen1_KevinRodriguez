@@ -54,9 +54,10 @@ public class principal extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         estado = new javax.swing.JComboBox<>();
         limpiar = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        mostrar = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        lista = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -171,7 +172,7 @@ public class principal extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(limpiar)
                                 .addGap(36, 36, 36)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,45 +208,49 @@ public class principal extends javax.swing.JFrame {
                     .addComponent(por, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Guardar)
                     .addComponent(limpiar))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         Modificar.addTab("Agregar", jPanel1);
 
-        jPanel4.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel4.setForeground(new java.awt.Color(153, 153, 153));
+        mostrar.setBackground(new java.awt.Color(153, 153, 153));
+        mostrar.setForeground(new java.awt.Color(153, 153, 153));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+        lista.setColumns(20);
+        lista.setRows(5);
+        jScrollPane1.setViewportView(lista);
+
+        jButton1.setText("Mostrar Lista");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+        javax.swing.GroupLayout mostrarLayout = new javax.swing.GroupLayout(mostrar);
+        mostrar.setLayout(mostrarLayout);
+        mostrarLayout.setHorizontalGroup(
+            mostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mostrarLayout.createSequentialGroup()
+                .addGap(251, 251, 251)
+                .addComponent(jButton1)
+                .addContainerGap(328, Short.MAX_VALUE))
+            .addGroup(mostrarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(163, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(135, 135, 135))
+        mostrarLayout.setVerticalGroup(
+            mostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mostrarLayout.createSequentialGroup()
+                .addContainerGap(148, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addGap(38, 38, 38))
         );
 
-        Modificar.addTab("Modificar", jPanel4);
+        Modificar.addTab("Modificar", mostrar);
 
         jPanel5.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -253,11 +258,11 @@ public class principal extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 641, Short.MAX_VALUE)
+            .addGap(0, 686, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 399, Short.MAX_VALUE)
+            .addGap(0, 424, Short.MAX_VALUE)
         );
 
         Modificar.addTab("Eliminar", jPanel5);
@@ -298,14 +303,11 @@ public class principal extends javax.swing.JFrame {
         a=tipo.getSelectedItem().toString();
         sexo=sex.getSelectedItem().toString();
         String edada=Edad.getText();
-        e=Integer.parseInt(edada);
+
         char sa=(char) e;
-        agregar m=new agregar(Nombre.getText(),e,sexo);
+        agregar m=new agregar(Nombre.getText(),e,sexo,a,porcen,campis,estad);
         anad.add(m);    
-        armast ca=new armast(a,porcen);
-        arm.add(ca);
-        Campistas c=new Campistas(campis,estad);
-        campi.add(c);
+
         JOptionPane.showMessageDialog(null, "Se añadio correctamente");   
         
     }//GEN-LAST:event_GuardarActionPerformed
@@ -314,7 +316,23 @@ public class principal extends javax.swing.JFrame {
        Nombre.setText(null);
        Edad.setText(null);
     }//GEN-LAST:event_limpiarActionPerformed
-    
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       String mos="";
+        for (Object a : anad) {
+             mos+=a+"\n";   
+        }
+        lista.setText(mos);
+    }//GEN-LAST:event_jButton1ActionPerformed
+    public void mostrar(){
+        String mos="";
+        for (Object a : anad) {
+            if (((Campistas)anad.get(6)).getCampista().equalsIgnoreCase("viva")) {
+             mos+=a+"\n";   
+            }
+        }
+        lista.setText(mos);
+    }
     /**
      * @param args the command line arguments
      */
@@ -357,6 +375,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JTextField Nombre;
     private javax.swing.JComboBox<String> cam;
     private javax.swing.JComboBox<String> estado;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -366,11 +385,11 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton limpiar;
+    private javax.swing.JTextArea lista;
+    private javax.swing.JPanel mostrar;
     private javax.swing.JComboBox<String> por;
     private javax.swing.JComboBox<String> sex;
     private javax.swing.JComboBox<String> tipo;
