@@ -450,6 +450,7 @@ public class principal extends javax.swing.JFrame {
         a=tipo.getSelectedItem().toString();
         sexo=sex.getSelectedItem().toString();
         String edada=Edad.getText();
+
         agregar m=new agregar(Nombre.getText(),edada,sexo,a,porcen,campis,estad);
         anad.add(m);    
 
@@ -483,22 +484,22 @@ public class principal extends javax.swing.JFrame {
             String a=Nombre.getText();
             a=aa.getText();
             ((agregar)anad.get(0)).setNombre(a);
-             String aa2=Edad.getText();
+             String aa2="";
             aa2=a1.getText();
             ((agregar)anad.get(1)).setNombre(aa2);
-            String aa3=sex.getSelectedItem().toString();;
+            String aa3="";
             aa3=a2.getSelectedItem().toString();
             ((agregar)anad.get(2)).setNombre(aa3);
-             String aa4=tipo.getSelectedItem().toString();;
+             String aa4="";
             aa3=a3.getSelectedItem().toString();
             ((agregar)anad.get(3)).setNombre(aa4);
-             String aa5=por.getSelectedItem().toString();
+             String aa5="";
             aa5=a4.getSelectedItem().toString();
             ((agregar)anad.get(4)).setNombre(aa5);
-             String aa6=cam.getSelectedItem().toString();
+             String aa6="";
             aa6=a5.getSelectedItem().toString();
             ((agregar)anad.get(5)).setNombre(aa6);
-             String aa7=estado.getSelectedItem().toString();
+             String aa7="";
             aa7=a6.getSelectedItem().toString();
             ((agregar)anad.get(6)).setNombre(aa7);
             }
